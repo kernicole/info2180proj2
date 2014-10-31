@@ -1,6 +1,6 @@
 /*
-CSE 190 M, Spring 2009, Marty Stepp
-Homework 6 (Fifteen Puzzle) style sheet
+CSE 190 M, Homework 6 (Fifteen Puzzle) style sheet
+You should not modify this file.
 */
 
 body {
@@ -41,10 +41,12 @@ h1 {
 /* This class should be applied to each of the 15 puzzle pieces. */
 .puzzlepiece {
 	background-image: url(background.jpg);
+	background-repeat: no-repeat;
 	border: 2px solid black;
+	cursor: default;
 	height: 96px;
 	line-height: 96px;
-	position: absolute;
+	/*position: absolute;*/
 	text-align: center;
 	vertical-align: middle;
 	width: 96px;
@@ -52,7 +54,7 @@ h1 {
 
 /* This class should be applied to a puzzle piece that can be moved. */
 .movablepiece:hover {
-	border-color: red;
+	border: 2px solid red;
 	color: #006600;
 	text-decoration: underline;
 }
@@ -63,4 +65,20 @@ h1 {
 
 #w3c img {
 	border: none;
+}
+
+/* grading styles */
+#gradingarea {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 999999;
+}
+
+.valid {
+	background-color: #bfb;
+}
+
+.invalid {
+	background-color: #f88;
 }
